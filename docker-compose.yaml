@@ -4,6 +4,7 @@ services:
   # Jaeger
   jaeger-all-in-one:
     image: jaegertracing/all-in-one:latest
+    command: ["--memory.max-traces", "2000"]
     restart: always
     ports:
       - "16686:16686"
